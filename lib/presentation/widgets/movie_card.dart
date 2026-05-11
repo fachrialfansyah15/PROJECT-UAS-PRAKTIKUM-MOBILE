@@ -38,13 +38,17 @@ class MovieCard extends StatelessWidget {
                 width: width,
                 height: height,
                 fit: BoxFit.cover,
-                placeholder: (_, _) => Container(
+                placeholder: (_, __) => Container(
+                  width: width,
+                  height: height,
                   color: AppTheme.surface,
                   child: const Center(
                     child: Icon(Icons.movie, color: AppTheme.textSecondary),
                   ),
                 ),
-                errorWidget: (_, _, _) => Container(
+                errorWidget: (_, __, ___) => Container(
+                  width: width,
+                  height: height,
                   color: AppTheme.surface,
                   child: const Center(
                     child: Icon(
