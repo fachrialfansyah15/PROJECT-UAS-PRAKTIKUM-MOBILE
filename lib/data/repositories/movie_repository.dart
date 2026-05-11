@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/movie.dart';
 import '../models/movie_detail.dart';
 import '../services/tmdb_service.dart';
-import '../../core/di.dart';
+import '../../core/dio.dart';
 
 class MovieRepository {
   final TmdbService _service;
