@@ -200,16 +200,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ],
               ),
             )
-          : GridView.builder(
-              padding: const EdgeInsets.all(16),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                childAspectRatio: 0.55,
-                crossAxisSpacing: 8,
-                mainAxisSpacing: 8,
+          // Ganti GridView → SingleChildScrollView + Wrap
+          // Wrap membungkus card sesuai ukuran aslinya (width=140, height=210)
+          // tanpa memaksa card mengisi tinggi cell seperti GridView.
+          // Hasilnya: tidak ada ruang kosong di bawah poster.
+          : SingleChildScrollView(
+              padding: const EdgeInsets.all(12),
+              child: Wrap(
+                spacing: 8, // jarak horizontal antar card
+                runSpacing: 8, // jarak vertikal antar baris
+                children: movies
+                    .map((movie) => MovieCard(movie: movie))
+                    .toList(),
               ),
-              itemCount: movies.length,
-              itemBuilder: (_, i) => MovieCard(movie: movies[i]),
             ),
       loading: () => const Center(
         child: CircularProgressIndicator(color: AppTheme.primary),
