@@ -327,7 +327,7 @@ class _HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 255,
+      height: 280,
       child: ListView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         scrollDirection: Axis.horizontal,
