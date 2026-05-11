@@ -346,7 +346,7 @@ class _LoadingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      height: 255,
+      height: 280,
       child: Center(child: CircularProgressIndicator(color: AppTheme.primary)),
     );
   }
