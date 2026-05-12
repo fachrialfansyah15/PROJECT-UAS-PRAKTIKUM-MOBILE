@@ -7,7 +7,7 @@ void main() {
   testWidgets('App renders without crashing', (WidgetTester tester) async {
     await tester.pumpWidget(
       const ProviderScope(
-        child: CineMateApp(), // sesuaikan dengan nama widget di main.dart
+        child: MyApp(), // sesuaikan dengan nama widget di main.dart
       ),
     );
 

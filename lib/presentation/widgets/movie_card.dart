@@ -38,7 +38,7 @@ class MovieCard extends StatelessWidget {
                 width: width,
                 height: height,
                 fit: BoxFit.cover,
-                placeholder: (_, __) => Container(
+                placeholder: (_, __Q) => Container(
                   width: width,
                   height: height,
                   color: AppTheme.surface,
